@@ -1,14 +1,12 @@
 // app global css in SCSS form
 
+
 $text-color: #1DA1F2;
 
 .container{
   max-width: 975px
-  margin 0px auto
-}
-
-.text-grand-hotel{
-  font-family: 'Grand Hotel', 'Roboto','Helvetica Neue', Helvatica, Arial, sans-serif
+  margin 0px auto;
+  margin-left:442px
 }
 
 .menu-item{
@@ -23,8 +21,20 @@ $text-color: #1DA1F2;
   padding-top: 40px;
 }
 
+
 .user{
   padding-top: 20%;
+}
+
+
+.q-textarea.q-field--labeled .q-field__native {
+  min-height: 50px;
+  padding-top: 15px;
+  border: none;
+}
+
+.q-textarea .q-field__native, .q-textarea .q-field__prefix, .q-textarea .q-field__suffix {
+  line-height: 35px;
 }
 
 @media (max-width: 1440px) {

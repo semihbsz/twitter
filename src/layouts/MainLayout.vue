@@ -1,8 +1,5 @@
 <template>
   <q-layout view=" lHh Lpr lFf">
-    
-     
-
       <q-drawer
       v-model="drawer"
       show-if-above
@@ -171,9 +168,6 @@
           </q-list>
           </div>
           
-          
-
-          
           <div class="user text-center" >
               <q-btn  flat rounded color="Black" size="17px">
                   <q-item>
@@ -188,11 +182,11 @@
                         <q-item-label caption>@semihb</q-item-label>
                     </q-item-section>
                   </q-item>
-          </q-btn>
+              </q-btn>
           </div>
-          
-      </q-drawer>
 
+
+      </q-drawer>
 
     <q-page-container>
       <router-view />
