@@ -6,9 +6,9 @@
       <div class="col">
         <div class="bg-white text-dark">
       <q-toolbar>
-        <q-toolbar-title>Anasayfa</q-toolbar-title>
+        <q-toolbar-title class="font-bold" style="height:75px;">Anasayfa</q-toolbar-title>
 
-        <q-btn flat round dense icon="eva-trending-up" />
+        <q-btn flat round dense color="primary" icon="eva-trending-up" />
       </q-toolbar>
       <q-toolbar >
             <q-input class="full-width full-height" autogrow type="textarea" label="Bir şeyler paylaş.." style="font-size:2rem;">
@@ -17,14 +17,28 @@
                   <img  src="https://tr.gravatar.com/userimage/52247678/1183cfa3020b5fbde9203a7d4d01f154.jpg?size=200">
                 </q-avatar>
               </template> 
-              <template v-slot:after>
-                <q-btn round dense flat icon="send" />
-              </template>
+              
           </q-input>
       </q-toolbar>
-    </div>
+        <div class="post-icons">
+          <q-toolbar>
+            <q-btn flat round size="1.3rem" color="primary" icon="eva-image-outline" />
+            <q-btn flat round size="1.3rem" color="primary" icon="eva-film-outline" />
+            <q-btn flat round size="1.3rem" color="primary" icon="eva-bar-chart-outline" />
+            <q-btn flat round size="1.3rem" color="primary" icon="eva-calendar-outline" />
+            <q-space />
+            <q-btn flat rounded color="primary" size="1rem" label="Tweetle"/>
 
-         <q-card class="my-card" flat bordered>
+          </q-toolbar>
+        </div>
+        </div>
+
+         <q-card
+          v-for="post in posts"
+          :key="post.id"
+          class="post-card"
+          flat
+          bordered>
       <q-item>
         <q-item-section avatar>
           <q-avatar>
@@ -44,7 +58,7 @@
 
       <q-card-section horizontal>
         <q-card-section>
-          {{ lorem }}
+          
         </q-card-section>
 
         <q-separator vertical />
@@ -60,13 +74,6 @@
       </div>
     </div>
 </div>
-
-
-
-
-
-
-    
   </q-page>
 </template>
 
@@ -75,7 +82,82 @@
 
 <script>
 export default{
-
-  name: 'Anasayfa'
+  name: 'Anasayfa',
+  data() {
+    return {
+      posts: [
+        {
+          id: 1,
+          caption: 'Mountain',
+          date: 1624804870755,
+          location: 'Istanbul, Turkey',
+          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
+        },
+        {
+          id: 2,
+          caption: "Mountain",
+          date: 1624804870755,
+          location: 'Istanbul, Turkey',
+          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
+        },
+        {
+          id: 3,
+          caption: "Mountain",
+          date: 1624804870755,
+          location: 'Istanbul, Turkey',
+          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
+        },
+        {
+          id: 4,
+          caption: 'Mountain',
+          date: 1624804870755,
+          location: 'Istanbul, Turkey',
+          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
+        },
+        {
+          id: 5,
+          caption: 'Mountain',
+          date: 1624804870755,
+          location: 'Istanbul, Turkey',
+          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
+        },
+        {
+          id: 6,
+          caption: 'Mountain',
+          date: 1624804870755,
+          location: 'Istanbul, Turkey',
+          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
+        },
+        {
+          id: 7,
+          caption: 'Mountain',
+          date: 1624804870755,
+          location: 'Istanbul, Turkey',
+          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
+        },
+        {
+          id: 8,
+          caption: 'Mountain',
+          date: 1624804870755,
+          location: 'Istanbul, Turkey',
+          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
+        },
+        {
+          id: 9,
+          caption: 'Mountain',
+          date: 1624804870755,
+          location: 'Istanbul, Turkey',
+          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
+        },
+        {
+          id: 10,
+          caption: 'Mountain',
+          date: 1624804870755,
+          location: 'Istanbul, Turkey',
+          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
+        },
+      ]
+    }
+  }
 }
 </script>
