@@ -1,1 +1,19 @@
 // app global css in SCSS form
+
+.menu-items{
+
+  &:hover {
+    color:#1DA1F2;
+}
+
+
+} 
+
+.text-grand-hotel{
+  font-family: 'Grand Hotel', 'Roboto','Helvetica Neue', Helvatica, Arial, sans-serif
+}
+
+.container{
+  max-width: 975px
+  margin 0px auto
+}
