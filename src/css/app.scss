@@ -10,7 +10,6 @@ $text-color: #1DA1F2;
     color:$text-color;
 }
 
-
 } 
 
 .text-grand-hotel{
@@ -20,4 +19,9 @@ $text-color: #1DA1F2;
 .container{
   max-width: 975px
   margin 0px auto
+}
+
+@media (max-width: 1170px) {
+  
+
 }

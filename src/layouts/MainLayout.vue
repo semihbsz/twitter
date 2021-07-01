@@ -1,12 +1,16 @@
 <template>
   <q-layout view=" lHh Lpr lFf">
     
-     <q-drawer
+     
+
+      <q-drawer
+      v-model="drawer"
       show-if-above
-      bordered
-      mini-to-overlay
       :width="500"
       :breakpoint="500"
+      :mini="miniState"
+      bordered
+      mini-to-overlay
       >
           <div class="text-center">
             <q-btn
@@ -26,7 +30,7 @@
                 rounded
                 color="Black"
                 icon="eva-home-outline"
-                label="Anasayfa"
+                :label="$q.screen.gt.md ? 'Anasayfa' : void 0"
                 size="24px" />
               </q-item>
                 <q-item class="justify-center">
@@ -36,7 +40,7 @@
                 rounded
                 color="Black"
                 icon="eva-hash-outline"
-                label="Keşfet"
+                :label="$q.screen.gt.md ? 'Keşfet' : void 0"
                 size="24px" />
                 </q-item>
                 <q-item class="justify-center">
@@ -46,7 +50,7 @@
                 rounded
                 color="Black"
                 icon="eva-bell-outline"
-                label="Bildirimler"
+                :label="$q.screen.gt.md ? 'Bildirimler' : void 0"
                 size="24px" />
                 </q-item>
                 <q-item class="justify-center">
@@ -56,7 +60,7 @@
                 rounded
                 color="Black"
                 icon="eva-email-outline"
-                label="Mesajlar"
+                :label="$q.screen.gt.md ? 'Mesajlar' : void 0"
                 size="24px" />
                 </q-item>
                 <q-item class="justify-center">
@@ -66,7 +70,7 @@
                 rounded
                 color="Black"
                 icon="eva-bookmark-outline"
-                label="Yer İşaretleri"
+                :label="$q.screen.gt.md ? 'Yer İşaretleri' : void 0"
                 size="24px" />
                 </q-item>
                 <q-item class="justify-center">
@@ -76,7 +80,7 @@
                 rounded
                 color="Black"
                 icon="eva-list-outline"
-                label="Listeler"
+                :label="$q.screen.gt.md ? 'Listeler' : void 0"
                 size="24px" />
                 </q-item>
                 <q-item class="justify-center">
@@ -86,7 +90,7 @@
                 rounded
                 color="Black"
                 icon="eva-person-outline"
-                label="Profil"
+                :label="$q.screen.gt.md ? 'Profil' : void 0"
                 size="24px" />
                 </q-item>
                 <q-item class="justify-center">
@@ -95,8 +99,8 @@
                 flat
                 rounded
                 color="Black"
-                icon="eva-bookmark-outline"
-                label="Flat Rounded"
+                icon="eva-more-horizontal"
+                :label="$q.screen.gt.md ? 'Daha Fazla' : void 0"
                 size="24px">
 
                 <q-list> <!---dropdown items--->
@@ -190,6 +194,7 @@
           
       </q-drawer>
 
+
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -198,10 +203,22 @@
 
 <script>
 
+
 export default {
   name: 'MainLayout',
 
+   data: function() {
+    return {
+      drawer: true,
+      switchToMini: 1440
+    }
+  },
+  computed: {
+    miniState: function() {
+      return this.$q.screen.width < this.switchToMini
+      //this.$q.screen.name === "sm"
+    }
+  }
   
 }
-
 </script>
