@@ -14,6 +14,7 @@
       >
           <div class="text-center">
             <q-btn
+            class="logo"
             size="25px"
             flat
             round
@@ -157,14 +158,15 @@
                 </q-list>
                 </q-btn-dropdown>
                 </q-item>
+
                 <q-btn
-                class="menu-item"
+                class="menu-item menu-item-tweet"
                 padding="20px"
                 rounded
                 color="primary"
                 label="Tweetle"
                 size="19px"
-                style="width:55%;"
+                style="width:35%;"
                  />
           </q-list>
           </div>
@@ -172,8 +174,8 @@
           
 
           
-          <div class="text-center">
-              <q-btn  flat rounded color="Black" size="17px" icon-right="eva-more-horizontal">
+          <div class="user text-center" >
+              <q-btn  flat rounded color="Black" size="17px">
                   <q-item>
                     <q-item-section avatar>
                         <q-avatar>
@@ -181,16 +183,13 @@
                         </q-avatar>
                     </q-item-section>
 
-                    <q-item-section>
+                    <q-item-section class="user-info">
                         <q-item-label>Semih</q-item-label>
                         <q-item-label caption>@semihb</q-item-label>
                     </q-item-section>
                   </q-item>
           </q-btn>
           </div>
-          
-                
-        
           
       </q-drawer>
 
