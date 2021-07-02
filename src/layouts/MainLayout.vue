@@ -1,14 +1,6 @@
 <template>
   <q-layout view=" lHh Lpr lFf">
-      <q-drawer
-      v-model="drawer"
-      show-if-above
-      :width="500"
-      :breakpoint="500"
-      :mini="miniState"
-      bordered
-      mini-to-overlay
-      >
+      <q-drawer v-model="drawer" show-if-above :width="500" :breakpoint="500" :mini="miniState" bordered mini-to-overlay>
           <div class="text-center">
             <q-btn
             class="logo"
@@ -155,7 +147,6 @@
                 </q-list>
                 </q-btn-dropdown>
                 </q-item>
-
                 <q-btn
                 class="menu-item menu-item-tweet"
                 padding="20px"
@@ -191,6 +182,15 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+      <q-footer class="mobile-nav">
+          <q-tabs dense align="justify" :breakpoint="0" class="bg-white text-primary q-pa-sm">
+            <q-tab icon="eva-home-outline" />
+            <q-tab icon="eva-search-outline" />
+            <q-tab icon="eva-bell-outline" />
+            <q-tab icon="eva-email-outline" />
+        </q-tabs>
+      </q-footer>
+    
   </q-layout>
 </template>
 
@@ -202,13 +202,14 @@ export default {
    data: function() {
     return {
       drawer: true,
-      switchToMini: 1470
+      switchToMini: 1470,
     }
   },
   computed: {
     miniState: function() {
       return this.$q.screen.width < this.switchToMini
       //this.$q.screen.name === "sm"
+      
     }
   }
   

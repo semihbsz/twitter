@@ -1,6 +1,7 @@
 // app global css in SCSS form
 
 
+
 $text-color: #1DA1F2;
 $font-bold: 800;
 
@@ -62,11 +63,60 @@ body{
   line-height: 35px;
 }
 
+.add-post-mobile{
+  display: none;
+}
+
 .search-button{
 }
 
 
+.q-page-container{
+  
+}
+
+.mobile-nav{
+  display: none;
+}
+
+
+@media (max-width: 800px) {
+  
+  .large-screen-only{
+    display: none;
+  }
+  .post-send{
+    display: none;
+  } 
+  .post-icons{
+    display: none;
+  }
+  
+  .q-drawer{
+    display: none;
+  }
+  
+  .add-post-mobile{
+    display: block;
+  }
+  .mobile-nav{
+    display: block;
+  }
+
+}
+
+@media (max-width: 1023px) {
+  
+  .large-screen-only{
+    display: none;
+  }
+  
+
+}
+
 @media (max-width: 1470px) {
+
+  
 
   .container{
     margin-left:0px
@@ -83,4 +133,9 @@ body{
   .menu-item-tweet{
     display: none;    
   }
+
+  
 }
+
+
+

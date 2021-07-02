@@ -3,14 +3,13 @@
 
 <div class="container">
     <div class="row">
-      <div class="col-7">
+      <div class="col-md-7">
         <div class="bg-white text-dark">
       <q-toolbar>
         <q-toolbar-title class="font-bold" style="height:75px;">Anasayfa</q-toolbar-title>
-
         <q-btn flat round dense color="primary" icon="eva-trending-up" />
       </q-toolbar>
-      <q-toolbar >
+      <q-toolbar class="post-send">
             <q-input class="full-width full-height" autogrow type="textarea" label="Bir şeyler paylaş.." style="font-size:2rem;">
               <template v-slot:before>
                 <q-avatar size="250%">
@@ -78,7 +77,7 @@
         </q-card-section>
     </q-card>
       </div>
-      <div class="col-md-4">
+      <div class="large-screen-only col-4">
         <div class="q-pa-sm">
           <q-input class="search-button" color="#EFF3F4" rounded outlined placeholder="Ara">
             <template v-slot:append>
@@ -335,16 +334,27 @@
       </div>
     </div>
 </div>
-  </q-page>
+          <q-page-sticky class="add-post-mobile" position="bottom-right" :offset="[28, 38]">
+            <q-btn fab icon="eva-plus-outline" color="primary"/>
+          </q-page-sticky>
+
+        
+      </q-page>
 </template>
 
 
 
 
 <script>
-
+import { ref } from 'vue'
 export default{
   name: 'Anasayfa',
+  setup () {
+    return {
+      dialog: ref(false),
+      maximizedToggle: ref(true)
+    }
+  },
   data() {
     return {
       posts: [
@@ -420,6 +430,8 @@ export default{
         },
       ]
     }
+  },
+  mounted(){
   }
 }
 </script>
