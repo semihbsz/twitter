@@ -41,7 +41,7 @@
           bordered>
       <q-item>
         <q-item-section avatar>
-          <q-avatar>
+          <q-avatar size="60px">
             <img src="https://tr.gravatar.com/userimage/52247678/1183cfa3020b5fbde9203a7d4d01f154.jpg?size=200">
           </q-avatar>
         </q-item-section> 
@@ -51,12 +51,26 @@
             <q-badge color="grey" rounded class="q-mr-sm" />Konu
           </div>
           <q-item-label>
-            <span class="text-bold">Semih &nbsp;</span>
+            <span class="text-bold text-subtitle1">Semih &nbsp;</span>
             <span caption>@semihb</span>
           </q-item-label>
         </q-item-section>
         <q-space/>
-        <q-btn dense flat color="grey-7" icon="eva-more-horizontal-outline"/>
+        <q-btn color="grey-7" round flat icon="eva-more-horizontal-outline">
+              <q-menu cover auto-close>
+                <q-list>
+                  <q-item clickable>
+                    <q-item-section>Remove Card</q-item-section>
+                  </q-item>
+                  <q-item clickable>
+                    <q-item-section>Send Feedback</q-item-section>
+                  </q-item>
+                  <q-item clickable>
+                    <q-item-section>Share</q-item-section>
+                  </q-item>
+                </q-list>
+              </q-menu>
+            </q-btn>
       </q-item>
 
         <q-card-section class="q-ml-xl" style="padding-top:0px;">
@@ -66,14 +80,171 @@
       </div>
       <div class="col-3">
         <div class="q-pa-sm">
-
           <q-input class="search-button" color="#EFF3F4" rounded outlined placeholder="Ara">
             <template v-slot:append>
               <q-icon name="search" />
             </template>
           </q-input>
-
         </div>
+
+      <q-card flat rounded class="my-card bg-grey-1">
+      <q-card-section>
+        <div class="row items-center no-wrap">
+          <div class="col">
+            <div class="font-bold" style="line-height:110%">İlgilini Çekebilecek Gündemler</div>
+          </div>
+
+          <div class="col-auto">
+            <q-btn color="primary" round flat icon="eva-settings-outline">
+              <q-menu cover auto-close>
+                <q-list>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.5rem">İlgimi Çekmiyor</q-item-section>
+                  </q-item>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.5rem">Bu gündem başlığı zararlı veya spam içeriyor</q-item-section>
+                  </q-item>
+                </q-list>
+              </q-menu>
+            </q-btn>
+          </div>
+        </div>
+      </q-card-section>
+
+
+
+      <q-card-section class="q-pa-sm">
+        <q-btn flat class="full-width full-height">
+          <q-item-section style="text-align:left;" class="q-pa-sm">
+          <q-item-label caption style="font-size:1rem;">Türkiye konumunda gündemde</q-item-label>
+          <q-item-label style="font-size:1rem; padding-top:2px;">#etiket</q-item-label>
+          <q-item-label caption style="font-size:1rem; padding-top:5px;">1.059 tweet</q-item-label>
+        </q-item-section>
+        <q-space />
+
+        <q-btn color="grey-7" round flat icon="eva-more-horizontal-outline">
+              <q-menu cover auto-close>
+                <q-list>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">İlgimi Çekmiyor</q-item-section>
+                  </q-item>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">Bu gündem başlığı zararlı veya spam içeriyor</q-item-section>
+                  </q-item>
+                </q-list>
+              </q-menu>
+        </q-btn>
+        </q-btn>
+        <q-btn flat class="full-width full-height">
+          <q-item-section style="text-align:left;" class="q-pa-sm">
+          <q-item-label caption style="font-size:1rem;">Türkiye konumunda gündemde</q-item-label>
+          <q-item-label style="font-size:1rem; padding-top:2px;">#etiket</q-item-label>
+          <q-item-label caption style="font-size:1rem; padding-top:5px;">1.059 tweet</q-item-label>
+        </q-item-section>
+        <q-space />
+
+        <q-btn color="grey-7" round flat icon="eva-more-horizontal-outline">
+              <q-menu cover auto-close>
+                <q-list>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">İlgimi Çekmiyor</q-item-section>
+                  </q-item>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">Bu gündem başlığı zararlı veya spam içeriyor</q-item-section>
+                  </q-item>
+                </q-list>
+              </q-menu>
+        </q-btn>
+        </q-btn>
+        <q-btn flat class="full-width full-height">
+          <q-item-section style="text-align:left;" class="q-pa-sm">
+          <q-item-label caption style="font-size:1rem;">Türkiye konumunda gündemde</q-item-label>
+          <q-item-label style="font-size:1rem; padding-top:2px;">#etiket</q-item-label>
+          <q-item-label caption style="font-size:1rem; padding-top:5px;">1.059 tweet</q-item-label>
+        </q-item-section>
+        <q-space />
+
+        <q-btn color="grey-7" round flat icon="eva-more-horizontal-outline">
+              <q-menu cover auto-close>
+                <q-list>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">İlgimi Çekmiyor</q-item-section>
+                  </q-item>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">Bu gündem başlığı zararlı veya spam içeriyor</q-item-section>
+                  </q-item>
+                </q-list>
+              </q-menu>
+        </q-btn>
+        </q-btn>
+        <q-btn flat class="full-width full-height">
+          <q-item-section style="text-align:left;" class="q-pa-sm">
+          <q-item-label caption style="font-size:1rem;">Türkiye konumunda gündemde</q-item-label>
+          <q-item-label style="font-size:1rem; padding-top:2px;">#etiket</q-item-label>
+          <q-item-label caption style="font-size:1rem; padding-top:5px;">1.059 tweet</q-item-label>
+        </q-item-section>
+        <q-space />
+
+        <q-btn color="grey-7" round flat icon="eva-more-horizontal-outline">
+              <q-menu cover auto-close>
+                <q-list>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">İlgimi Çekmiyor</q-item-section>
+                  </q-item>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">Bu gündem başlığı zararlı veya spam içeriyor</q-item-section>
+                  </q-item>
+                </q-list>
+              </q-menu>
+        </q-btn>
+        </q-btn>
+        <q-btn flat class="full-width full-height">
+          <q-item-section style="text-align:left;" class="q-pa-sm">
+          <q-item-label caption style="font-size:1rem;">Türkiye konumunda gündemde</q-item-label>
+          <q-item-label style="font-size:1rem; padding-top:2px;">#etiket</q-item-label>
+          <q-item-label caption style="font-size:1rem; padding-top:5px;">1.059 tweet</q-item-label>
+        </q-item-section>
+        <q-space />
+
+        <q-btn color="grey-7" round flat icon="eva-more-horizontal-outline">
+              <q-menu cover auto-close>
+                <q-list>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">İlgimi Çekmiyor</q-item-section>
+                  </q-item>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">Bu gündem başlığı zararlı veya spam içeriyor</q-item-section>
+                  </q-item>
+                </q-list>
+              </q-menu>
+        </q-btn>
+        </q-btn>
+        <q-btn flat class="full-width full-height">
+          <q-item-section style="text-align:left;" class="q-pa-sm">
+          <q-item-label caption style="font-size:1rem;">Türkiye konumunda gündemde</q-item-label>
+          <q-item-label style="font-size:1rem; padding-top:2px;">#etiket</q-item-label>
+          <q-item-label caption style="font-size:1rem; padding-top:5px;">1.059 tweet</q-item-label>
+        </q-item-section>
+        <q-space />
+
+        <q-btn color="grey-7" round flat icon="eva-more-horizontal-outline">
+              <q-menu cover auto-close>
+                <q-list>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">İlgimi Çekmiyor</q-item-section>
+                  </q-item>
+                  <q-item clickable>
+                    <q-item-section style="font-size:1.2rem">Bu gündem başlığı zararlı veya spam içeriyor</q-item-section>
+                  </q-item>
+                </q-list>
+              </q-menu>
+        </q-btn>
+        </q-btn>
+        <q-btn color="primary" flat class="full-width">
+          Daha Fazla Göster
+        </q-btn>
+      </q-card-section>
+    </q-card>
 
       </div>
     </div>
