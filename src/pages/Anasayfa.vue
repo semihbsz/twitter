@@ -1,7 +1,7 @@
 <template>
-  <q-page class="container">
+  <q-page>
 
-<div >
+<div class="container">
     <div class="row">
       <div class="col-7">
         <div class="bg-white text-dark">
@@ -310,8 +310,8 @@
            <q-item>
 
         <q-item-section style="text-align:left;font-size:1rem;;">
-          <q-item-label>Müzik</q-item-label>
-          <q-item-label caption> Müzik hakkında herşey </q-item-label>
+          <q-item-label>Futbol</q-item-label>
+          <q-item-label caption>Spor</q-item-label>
         </q-item-section>
         
       </q-item>
@@ -333,9 +333,6 @@
         © 2021 Twitter, Inc.
       </div>
       </div>
-      
-
-
     </div>
 </div>
   </q-page>

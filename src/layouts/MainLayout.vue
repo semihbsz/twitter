@@ -98,7 +98,7 @@
                 rounded
                 color="Black"
                 icon="eva-more-horizontal"
-                :label="$q.screen.gt.md ? 'Daha Fazla' : void 0"
+                :label="$q.screen.gt.lg ? 'Daha Fazla' : void 0"
                 size="24px">
 
                 <q-list> <!---dropdown items--->
@@ -195,7 +195,8 @@
 </template>
 
 <script>
-
+import { Screen } from 'quasar'
+Screen.setSizes({ sm: 300, md: 500, lg: 1470, xl: 2000 })
 
 export default {
   name: 'MainLayout',
@@ -203,7 +204,7 @@ export default {
    data: function() {
     return {
       drawer: true,
-      switchToMini: 1440
+      switchToMini: 1470
     }
   },
   computed: {
