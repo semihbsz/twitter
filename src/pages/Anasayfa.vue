@@ -78,7 +78,7 @@
         </q-card-section>
     </q-card>
       </div>
-      <div class="col-3">
+      <div class="col-4">
         <div class="q-pa-sm">
           <q-input class="search-button" color="#EFF3F4" rounded outlined placeholder="Ara">
             <template v-slot:append>
@@ -87,7 +87,7 @@
           </q-input>
         </div>
 
-      <q-card flat rounded class="my-card bg-grey-1">
+      <q-card flat rounded class="bg-grey-1 q-ma-md">
       <q-card-section>
         <div class="row items-center no-wrap">
           <div class="col">
@@ -96,16 +96,7 @@
 
           <div class="col-auto">
             <q-btn color="primary" round flat icon="eva-settings-outline">
-              <q-menu cover auto-close>
-                <q-list>
-                  <q-item clickable>
-                    <q-item-section style="font-size:1.5rem">İlgimi Çekmiyor</q-item-section>
-                  </q-item>
-                  <q-item clickable>
-                    <q-item-section style="font-size:1.5rem">Bu gündem başlığı zararlı veya spam içeriyor</q-item-section>
-                  </q-item>
-                </q-list>
-              </q-menu>
+              
             </q-btn>
           </div>
         </div>
@@ -244,9 +235,107 @@
           Daha Fazla Göster
         </q-btn>
       </q-card-section>
-    </q-card>
+      </q-card>
 
+
+      <q-card flat round class="bg-grey-1 q-ma-md">
+      <q-card-section>
+        <div class="row items-center no-wrap">
+          <div class="col">
+            <div class="font-bold" style="line-height:110%">Kimi takip etmeli</div>
+          </div>
+        </div>
+      </q-card-section>
+
+      <q-btn flat class="full-width full-height">
+           <q-item>
+        <q-item-section avatar>
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+          </q-avatar>
+        </q-item-section>
+
+        <q-item-section style="text-align:left;font-size:1rem;;">
+          <q-item-label>user</q-item-label>
+          <q-item-label caption> @username </q-item-label>
+        </q-item-section>
+      </q-item>
+        <q-space />
+        <q-btn outline rounded size="110%" color="primary" label="Takip Et" />
+      </q-btn>
+      <q-btn flat class="full-width full-height">
+           <q-item>
+        <q-item-section avatar>
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+          </q-avatar>
+        </q-item-section>
+
+        <q-item-section style="text-align:left;font-size:1rem;;">
+          <q-item-label>user</q-item-label>
+          <q-item-label caption> @username </q-item-label>
+        </q-item-section>
+      </q-item>
+        <q-space />
+        <q-btn outline rounded size="110%" color="primary" label="Takip Et" />
+      </q-btn>
+      <q-btn color="primary" flat class="full-width">
+          Daha Fazla Göster
+        </q-btn>
+
+
+      </q-card>
+
+      <q-card flat round class="bg-grey-1 q-ma-md">
+      <q-card-section>
+        <div class="row items-center no-wrap">
+          <div class="col">
+            <div class="font-bold" style="line-height:110%">Takip edilebilecek konular</div>
+          </div>
+        </div>
+      </q-card-section>
+
+      <q-btn flat class="full-width full-height">
+           <q-item>
+
+        <q-item-section style="text-align:left;font-size:1rem;;">
+          <q-item-label>Basketbol</q-item-label>
+          <q-item-label caption> Spor </q-item-label>
+        </q-item-section>
+      </q-item>
+        <q-space />
+        <q-btn outline rounded size="110%" color="primary" label="Takip Et" />
+      </q-btn>
+      <q-btn flat class="full-width full-height">
+           <q-item>
+
+        <q-item-section style="text-align:left;font-size:1rem;;">
+          <q-item-label>Müzik</q-item-label>
+          <q-item-label caption> Müzik hakkında herşey </q-item-label>
+        </q-item-section>
+        
+      </q-item>
+        <q-space />
+        <q-btn outline rounded size="110%" color="primary" label="Takip Et" />
+      </q-btn>
+      <q-btn color="primary" flat class="full-width">
+          Daha Fazla Göster
+        </q-btn>
+
+
+      </q-card>
+      <div class="text-center text-grey">
+        Hizmet Şartları
+        Gizlilik Politikası
+        Çerez Politikası<br>
+        Reklam bilgisi
+        Daha fazla
+        © 2021 Twitter, Inc.
       </div>
+      </div>
+      
+
+
     </div>
 </div>
   </q-page>
