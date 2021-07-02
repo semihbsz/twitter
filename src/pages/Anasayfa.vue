@@ -78,7 +78,7 @@
         </q-card-section>
     </q-card>
       </div>
-      <div class="col-4">
+      <div class="col-md-4">
         <div class="q-pa-sm">
           <q-input class="search-button" color="#EFF3F4" rounded outlined placeholder="Ara">
             <template v-slot:append>
@@ -304,7 +304,7 @@
         </q-item-section>
       </q-item>
         <q-space />
-        <q-btn outline rounded size="110%" color="primary" label="Takip Et" />
+        <q-btn outline rounded size="110%" color="primary" icon="eva-plus" />
       </q-btn>
       <q-btn flat class="full-width full-height">
            <q-item>
@@ -316,7 +316,7 @@
         
       </q-item>
         <q-space />
-        <q-btn outline rounded size="110%" color="primary" label="Takip Et" />
+        <q-btn outline rounded size="110%" color="primary" icon="eva-plus" />
       </q-btn>
       <q-btn color="primary" flat class="full-width">
           Daha Fazla Göster
@@ -342,6 +342,7 @@
 
 
 <script>
+
 export default{
   name: 'Anasayfa',
   data() {

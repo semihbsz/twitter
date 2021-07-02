@@ -165,7 +165,7 @@
                 size="19px"
                 style="width:35%;"
                  />
-          </q-list>
+            </q-list>
           </div>
           
           <div class="user text-center" >
@@ -195,8 +195,6 @@
 </template>
 
 <script>
-import { Screen } from 'quasar'
-Screen.setSizes({ sm: 300, md: 500, lg: 1470, xl: 2000 })
 
 export default {
   name: 'MainLayout',
