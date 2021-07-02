@@ -3,7 +3,7 @@
 
 <div >
     <div class="row">
-      <div class="col">
+      <div class="col-7">
         <div class="bg-white text-dark">
       <q-toolbar>
         <q-toolbar-title class="font-bold" style="height:75px;">Anasayfa</q-toolbar-title>
@@ -44,33 +44,37 @@
           <q-avatar>
             <img src="https://tr.gravatar.com/userimage/52247678/1183cfa3020b5fbde9203a7d4d01f154.jpg?size=200">
           </q-avatar>
-        </q-item-section>
+        </q-item-section> 
 
         <q-item-section>
-          <q-item-label>Title</q-item-label>
-          <q-item-label caption>
-            Subhead
+          <div>
+            <q-badge color="grey" rounded class="q-mr-sm" />Konu
+          </div>
+          <q-item-label>
+            <span class="text-bold">Semih &nbsp;</span>
+            <span caption>@semihb</span>
           </q-item-label>
         </q-item-section>
+        <q-space/>
+        <q-btn dense flat color="grey-7" icon="eva-more-horizontal-outline"/>
       </q-item>
 
-      <q-separator />
-
-      <q-card-section horizontal>
-        <q-card-section>
-          
+        <q-card-section class="q-ml-xl" style="padding-top:0px;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </q-card-section>
-
-        <q-separator vertical />
-
-        <q-card-section class="col-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </q-card-section>
-      </q-card-section>
     </q-card>
       </div>
-      <div class="col">
-        .col2
+      <div class="col-3">
+        <div class="q-pa-sm">
+
+          <q-input class="search-button" color="#EFF3F4" rounded outlined placeholder="Ara">
+            <template v-slot:append>
+              <q-icon name="search" />
+            </template>
+          </q-input>
+
+        </div>
+
       </div>
     </div>
 </div>
