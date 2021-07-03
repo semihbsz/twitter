@@ -47,8 +47,7 @@
 
         <q-item-section>
           <div>
-            <q-badge color="grey" rounded class="q-mr-sm" />Konu
-          </div>
+            <q-badge color="grey" rounded class="q-mr-sm" /> {{post.subject}} </div>
           <q-item-label>
             <span class="text-bold text-subtitle1">Semih &nbsp;</span>
             <span caption>@semihb</span>
@@ -73,7 +72,7 @@
       </q-item>
 
         <q-card-section class="q-ml-xl" style="padding-top:0px;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          {{post.caption}}
         </q-card-section>
     </q-card>
       </div>
@@ -360,73 +359,8 @@ export default{
       posts: [
         {
           id: 1,
-          caption: 'Mountain',
-          date: 1624804870755,
-          location: 'Istanbul, Turkey',
-          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
-        },
-        {
-          id: 2,
-          caption: "Mountain",
-          date: 1624804870755,
-          location: 'Istanbul, Turkey',
-          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
-        },
-        {
-          id: 3,
-          caption: "Mountain",
-          date: 1624804870755,
-          location: 'Istanbul, Turkey',
-          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
-        },
-        {
-          id: 4,
-          caption: 'Mountain',
-          date: 1624804870755,
-          location: 'Istanbul, Turkey',
-          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
-        },
-        {
-          id: 5,
-          caption: 'Mountain',
-          date: 1624804870755,
-          location: 'Istanbul, Turkey',
-          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
-        },
-        {
-          id: 6,
-          caption: 'Mountain',
-          date: 1624804870755,
-          location: 'Istanbul, Turkey',
-          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
-        },
-        {
-          id: 7,
-          caption: 'Mountain',
-          date: 1624804870755,
-          location: 'Istanbul, Turkey',
-          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
-        },
-        {
-          id: 8,
-          caption: 'Mountain',
-          date: 1624804870755,
-          location: 'Istanbul, Turkey',
-          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
-        },
-        {
-          id: 9,
-          caption: 'Mountain',
-          date: 1624804870755,
-          location: 'Istanbul, Turkey',
-          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
-        },
-        {
-          id: 10,
-          caption: 'Mountain',
-          date: 1624804870755,
-          location: 'Istanbul, Turkey',
-          imageUrl: 'https://cdn.quasar.dev/img/mountains.jpg'
+          caption: 'twitter kullanmayı seviyorum !',
+          subject: 'Yaşam'
         },
       ]
     }
