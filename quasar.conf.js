@@ -10,12 +10,12 @@
 const ESLintPlugin = require('eslint-webpack-plugin')
 const { configure } = require('quasar/wrappers');
 
+
+let API_LOCAL = 'http://localhost:3000',
+    API_PRODUCTION = 'https://twitter-clone-backendd.herokuapp.com'
+
+
 module.exports = configure(function (ctx) {
-
-  
-
-
-
 
   return {
     // https://v2.quasar.dev/quasar-cli/supporting-ts
@@ -52,7 +52,13 @@ module.exports = configure(function (ctx) {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
-      vueRouterMode: 'history', // available values: 'hash', 'history'
+      vueRouterMode: 'history',
+      env: {
+        API: API_LOCAL // API_LOCAL | API_PRODUCTION
+      },
+      
+
+      // available values: 'hash', 'history'
 
       // transpile: false,
 

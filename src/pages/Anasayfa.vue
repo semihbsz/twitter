@@ -9,8 +9,9 @@
         <q-toolbar-title class="font-bold" style="height:75px;">Anasayfa</q-toolbar-title>
         <q-btn flat round dense color="primary" icon="eva-trending-up" />
       </q-toolbar>
-      <q-toolbar class="post-send">
-            <q-input class="full-width full-height" autogrow type="textarea" label="Bir şeyler paylaş.." style="font-size:2rem;">
+          
+      <q-toolbar  class="post-send">
+            <q-input class="full-width full-height"  autogrow type="textarea" label="Bir şeyler paylaş.." style="font-size:2rem;">
               <template v-slot:before>
                 <q-avatar size="250%">
                   <img  src="https://tr.gravatar.com/userimage/52247678/1183cfa3020b5fbde9203a7d4d01f154.jpg?size=200">
@@ -26,7 +27,7 @@
             <q-btn flat round size="1.3rem" color="primary" icon="eva-bar-chart-outline" />
             <q-btn flat round size="1.3rem" color="primary" icon="eva-calendar-outline" />
             <q-space />
-            <q-btn flat rounded color="primary" size="1rem" label="Tweetle"/>
+            <q-btn flat rounded @click="addPost" color="primary" size="1rem" label="Tweetle"/>
 
           </q-toolbar>
         </div>
@@ -346,6 +347,8 @@
 
 <script>
 import { ref } from 'vue'
+
+
 export default{
   name: 'Anasayfa',
   setup () {
@@ -361,11 +364,25 @@ export default{
   },
   methods:{
     getPosts() {
-      this.$axios.get('http://localhost:3000/posts').then(response => {
+      this.$axios.get(`${ process.env.API }/posts`).then(response => {
         this.posts = response.data
       }).catch(err => {
         console.log('err: ',err)
       })
+    },
+    addPost() {
+      let formData = new FormData()
+      formData.append('id', this.post.id)
+      formData.append('caption', this.post.caption)
+
+      this.$axios.post(`${ process.env.API }/createPost`, formData).then(response => {
+        console.log('response: ', response)
+      }).catch(err => {
+        console.log('err: ', err)
+      })
+
+
+      // formData.append('subject', this.post.subject)
     }
   },
   created() {
